@@ -1,0 +1,11 @@
+
+<form id="productForm" ng-submit="processForm()">
+    <!-- our nested state views will be injected here -->
+    <div id="form-views" ui-view></div>
+</form>
+
+<div class="container">
+    <pre>
+        Form data should show here: {{ myForm.formData }}
+    </pre>
+</div>
