@@ -1,0 +1,70 @@
+<div class="col-lg-4 form-group">
+    <label ng-click="myForm.showSalesRepHelp = !myForm.showSalesRepHelp"
+           class="control-label" for="salesReps">Sales Reps
+        <span ng-class="myForm.showCorrectGlyph(myForm.showSalesRepHelp)"></span></label>
+
+    <div ng-if="myForm.showSalesRepHelp" class="well well-sm">
+        {{ myForm.salesRepHelp }}
+    </div>
+    <input type="text" class="form-control" id="salesReps" name="salesReps"
+           ng-model="myForm.formData.salesReps"
+           placeholder="# of sales reps">
+</div>
+
+<div class="col-lg-4 form-group">
+    <label ng-click="myForm.showAvgDealSizeHelp = !myForm.showAvgDealSizeHelp"
+           class="control-label" for="avgDealSize">Avg. Deal Size
+        <span ng-class="myForm.showCorrectGlyph(myForm.showAvgDealSizeHelp)"></span></label>
+    <div ng-if="myForm.showAvgDealSizeHelp" class="well well-sm">
+        {{ myForm.avgDealSizeHelp }}
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" id="avgDealSize" name="dealSize"
+               ng-model="myForm.formData.dealSize"
+               placeholder="Avg deal size">
+    </div>
+</div>
+
+<div class="col-lg-4 form-group">
+    <label ng-click="myForm.showEstimatedWinRateHelp = !myForm.showEstimatedWinRateHelp"
+           class="control-label" for="winRate">Estimated Win Rate
+        <span ng-class="myForm.showCorrectGlyph(myForm.showEstimatedWinRateHelp)"></span></label>
+    <div ng-if="myForm.showEstimatedWinRateHelp" class="well well-sm">
+        {{ myForm.estimatedWinRateHelp }}
+    </div>
+
+    <div class="input-group">
+        <input type="text" class="form-control" id="winRate" name="winRate"
+               ng-model="myForm.formData.winRate"
+               placeholder="Win rate">
+        <span class="input-group-addon">%</span>
+    </div>
+</div>
+
+<div class="col-lg-4 form-group">
+    <label ng-click="myForm.showCompetitorCountHelp = !myForm.showCompetitorCountHelp"
+           class="control-label" for="competitorCount">Competitor Count
+        <span ng-class="myForm.showCorrectGlyph(myForm.showCompetitorCountHelp)"></span></label>
+    <div ng-if="myForm.showCompetitorCountHelp" class="well well-sm">
+        {{ myForm.competitorCountHelp }}
+    </div>
+    <input type="text" class="form-control" id="competitorCount" name="competitorCount"
+           ng-model="myForm.formData.competitorCount" placeholder="# of competitors">
+</div>
+
+<div class="col-lg-4 form-group">
+    <label ng-click="myForm.showNewLogoRevenueHelp = !myForm.showNewLogoRevenueHelp"
+           class="control-label" for="annualNew">New Logo Revenue
+        <span ng-class="myForm.showCorrectGlyph(myForm.showNewLogoRevenueHelp)"></span></label>
+    <div ng-if="myForm.showNewLogoRevenueHelp" class="well well-sm">
+        {{ myForm.newLogoRevenueHelp }}
+    </div>
+
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" id="annualNew" name="newBusiness"
+               ng-model="myForm.formData.newBusiness" placeholder="New revenue">
+    </div>
+</div>

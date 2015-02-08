@@ -4,38 +4,40 @@
 
 <div class="container">
     <div class="row">
-    <div class="col-lg-4 form-group">
-        <label for="enterProductName">Product Name</label>
+        <div class="col-lg-4 form-group">
+            <label for="enterProductName">Product Name</label>
 
-        <div>
-            <input type="text" class="form-control" id="enterProductName" name="productName"
-                   ng-model="myForm.formData.productName"
-                   placeholder="Enter product name">
-        </div>
-    </div>
-
-    <div class="col-lg-4 form-group">
-        <label for="checkboxes">Planned Programs:</label>
-
-        <div id="checkboxes">
-            <div class="checkbox">
-                <label><input type="checkbox" name="hasWinLoss"
-                              ng-model="myForm.formData.hasWinLoss"> Win Loss
-                                                                     Analysis</label>
-            </div>
-            <div class="checkbox">
-                <label><input type="checkbox" name="hasCustomerExperience"
-                              ng-model="myForm.formData.hasCustomerExperience">
-                    Customer Experience Analysis</label>
+            <div>
+                <input type="text" class="form-control" id="enterProductName" name="productName"
+                       ng-model="myForm.formData.productName"
+                       placeholder="Enter product name">
             </div>
         </div>
-    </div>
+
+        <div class="col-lg-4 form-group">
+            <label for="checkboxes">Planned Programs:</label>
+
+            <div id="checkboxes">
+                <div class="checkbox">
+                    <label><input type="checkbox" name="hasWinLoss"
+                                  ng-model="myForm.formData.hasWinLoss"> Win Loss
+                                                                         Analysis</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" name="hasCustomerExperience"
+                                  ng-model="myForm.formData.hasCustomerExperience">
+                        Customer Experience Analysis</label>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-lg-8 row container">
         <a href="#" class="btn btn-primary btn-warning btn-sm">clear form</a>
         <!--TODO add a check to make sure a product name has been entered and
         at least one check-box has been checked-->
-        <a ui-sref="form.details" class="btn btn-primary btn-sm col-lg-offset-7">add product <span
-            class="glyphicon glyphicon-circle-arrow-right"></span></a>
+        <a ui-sref="form.details" class="btn btn-primary btn-sm col-lg-offset-7"
+           ng-show="myForm.formData.productName &&
+           (myForm.formData.hasWinLoss || myForm.formData.hasCustomerExperience)">
+            add product <span class="glyphicon glyphicon-circle-arrow-right"></span></a>
     </div>
 </div>

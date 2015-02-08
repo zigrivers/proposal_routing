@@ -1,112 +1,29 @@
 <div class="row">
 
-<div class="col-lg-6 container-fluid" id="win-loss-questions" ng-if="myForm.formData.hasWinLoss">
-    <div class="row well-sm">
-        <h4>Win Loss Analysis Questions for + [product name]</h4>
+    <div class="container-fluid" id="win-loss-questions"
+         ng-class="{'col-lg-6' : myForm.formData.hasWinLoss && myForm.formData.hasCustomerExperience}"
+         ng-if="myForm.formData.hasWinLoss">
+        <div class="row well-sm">
+            <h4>Win Loss Analysis Questions for + [product name]</h4>
 
-        <p>Answer the following questions to determine the size of program to recommend and the potential outcomes
-           the client can experience.</p>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="salesReps">Sales Reps</label>
-            <input type="text" class="form-control" id="salesReps" name="salesReps" ng-model="myForm.formData.salesReps"
-                   placeholder="Number of sales reps">
+            <p>Answer the following questions to determine the size of program to recommend and the potential outcomes
+               the client can experience.</p>
         </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="avgDealSize">Average Deal Size</label>
-            <div class="input-group">
-                <span class="input-group-addon">$</span>
-                <input type="text" class="form-control" id="avgDealSize" name="dealSize"
-                       ng-model="myForm.formData.dealSize"
-                       placeholder="Average deal size">
-            </div>
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="winRate">Estimared Win Rate</label>
-            <div class="input-group">
-                <input type="text" class="form-control" id="winRate" name="winRate" ng-model="myForm.formData.winRate"
-                       placeholder="Win rate">
-                <span class="input-group-addon">%</span>
-            </div>
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="competitorCount">Competitor Count</label>
-            <input type="text" class="form-control" id="competitorCount" name="competitorCount"
-                   ng-model="myForm.formData.competitorCount" placeholder="Number of competitors">
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="annualNew">New Logo Business</label>
-
-            <div class="input-group">
-                <span class="input-group-addon">$</span>
-                <input type="text" class="form-control" id="annualNew" name="newBusiness"
-                       ng-model="myForm.formData.newBusiness" placeholder="Annual new logo rev">
-            </div>
+        <div class="row" ng-include="'app/products/wl.detail.html'">
         </div>
     </div>
-</div>
-<div class="col-lg-6 container-fluid" id="customer-experience-questions" ng-if="myForm.formData.hasCustomerExperience">
-    <div class="row well-sm">
-        <h4>Customer Experience Questions for + [product name]</h4>
+    <div class="container-fluid" id="customer-experience-questions"
+         ng-class="{'col-lg-6' : myForm.formData.hasWinLoss && myForm.formData.hasCustomerExperience}"
+         ng-if="myForm.formData.hasCustomerExperience">
+        <div class="row well-sm">
+            <h4>Customer Experience Questions for + [product name]</h4>
 
-        <p>Answer the following questions to determine the size of program to recommend and the potential outcomes
-           the client can experience with a customer experience program.</p>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="numberCustomers">Customer Count</label>
-            <input type="text" class="form-control" id="numberCustomers" name="numberCustomers"
-                   ng-model="myForm.formData.numberCustomers" placeholder="Number of customers">
+            <p>Answer the following questions to determine the size of program to recommend and the potential outcomes
+               the client can experience with a customer experience program.</p>
         </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="topCustomerCount">Top Customer Count</label>
-            <input type="text" class="form-control" id="topCustomerCount" name="topCustomerCount"
-                   ng-model="myForm.formData.topCustomerCount" placeholder="Count of top customers">
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="annualSpend">Average Annual Spend</label>
-
-            <div class="input-group">
-                <span class="input-group-addon">$</span>
-                <input type="text" class="form-control" id="annualSpend" name="avgAnnualSpend"
-                       ng-model="myForm.formData.avgAnnualSpend" placeholder="Average spend">
-            </div>
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="revenueRetention">Revenue Retention Rate</label>
-
-            <div class="input-group">
-                <input type="text" class="form-control" id="revenueRetention" name="revenueRetention"
-                       ng-model="myForm.formData.revenueRetention" placeholder="Annual retention rate">
-                <span class="input-group-addon">%</span>
-            </div>
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="customerRetention">Customer Retention Rate</label>
-
-            <div class="input-group">
-                <input type="text" class="form-control" id="customerRetention" name="customerRetention"
-                       ng-model="myForm.formData.customerRetention" placeholder="Customer retention rate">
-                <span class="input-group-addon">%</span>
-            </div>
-        </div>
-
-        <div class="col-lg-3 form-group">
-            <label class="control-label" for="accountManagers">Count of Account Managers</label>
-            <input type="text" class="form-control" id="accountManagers" name="accountManagers"
-                   ng-model="myForm.formData.accountManagers" placeholder="Number of account managers">
+        <div class="row" ng-include="'app/products/ce.detail.html'">
         </div>
     </div>
-</div>
 </div>
 <div class="row container-fluid">
     <div class="row">

@@ -1,34 +1,47 @@
-<div class="container" id="customer-experience-questions" ng-show="">
-    <div class="row well">
-        <h4>Customer Experience Questions for + [product name]</h4>
+<div class="col-lg-4 form-group">
+    <label class="control-label" for="numberCustomers">Customer Count</label>
+    <input type="text" class="form-control" id="numberCustomers" name="numberCustomers"
+           ng-model="myForm.formData.numberCustomers" placeholder="# of customers">
+</div>
 
-        <p>Answer the following questions to determine the size of program to recommend and the potential outcomes
-           the client can experience with a customer experience program.</p>
+<div class="col-lg-4 form-group">
+    <label class="control-label" for="topCustomerCount">Top Customer Count</label>
+    <input type="text" class="form-control" id="topCustomerCount" name="topCustomerCount"
+           ng-model="myForm.formData.topCustomerCount" placeholder="# top customers">
+</div>
+
+<div class="col-lg-4 form-group">
+    <label class="control-label" for="annualSpend">Avg. Annual Spend</label>
+
+    <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="text" class="form-control" id="annualSpend" name="avgAnnualSpend"
+               ng-model="myForm.formData.avgAnnualSpend" placeholder="Average spend">
     </div>
-    <div class="row">
-        <div class="col-lg-2 form-group">
-            <label class="control-label" for="numberCustomers">Customer Count</label>
-            <input type="text" class="form-control" id="numberCustomers" placeholder="Number of customers">
-        </div>
-        <div class="col-lg-2 form-group">
-            <label class="control-label" for="topCustomerCount">Top Customer Count</label>
-            <input type="text" class="form-control" id="topCustomerCount" placeholder="Count of top customers">
-        </div>
-        <div class="col-lg-2 form-group">
-            <label class="control-label" for="annualSpend">Average Annual Spend</label>
-            <input type="text" class="form-control" id="annualSpend" placeholder="Average spend">
-        </div>
-        <div class="col-lg-2 form-group">
-            <label class="control-label" for="revenueRetention">Revenue Retention Rate</label>
-            <input type="text" class="form-control" id="revenueRetention" placeholder="Annual retention rate">
-        </div>
-        <div class="col-lg-2 form-group">
-            <label class="control-label" for="customerRetention">Customer Retention Rate</label>
-            <input type="text" class="form-control" id="customerRetention" placeholder="Customer retention rate">
-        </div>
-        <div class="col-lg-2 form-group">
-            <label class="control-label" for="accountManagers">Count of Account Managers</label>
-            <input type="text" class="form-control" id="accountManagers" placeholder="Number of account managers">
-        </div>
+</div>
+
+<div class="col-lg-4 form-group">
+    <label class="control-label" for="revenueRetention">Revenue Retention</label>
+
+    <div class="input-group">
+        <input type="text" class="form-control" id="revenueRetention" name="revenueRetention"
+               ng-model="myForm.formData.revenueRetention" placeholder="Retention rate">
+        <span class="input-group-addon">%</span>
     </div>
+</div>
+
+<div class="col-lg-4 form-group">
+    <label class="control-label" for="customerRetention">Customer Retention</label>
+
+    <div class="input-group">
+        <input type="text" class="form-control" id="customerRetention" name="customerRetention"
+               ng-model="myForm.formData.customerRetention" placeholder="Retention rate">
+        <span class="input-group-addon">%</span>
+    </div>
+</div>
+
+<div class="col-lg-4 form-group">
+    <label class="control-label" for="accountManagers">Account Managers</label>
+    <input type="text" class="form-control" id="accountManagers" name="accountManagers"
+           ng-model="myForm.formData.accountManagers" placeholder="Number of AMs">
 </div>
